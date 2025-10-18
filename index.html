@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vent i righe di testo</title>
+  <style>
+    :root{
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#2563eb;
+    }
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      margin: 0;
+      padding: 32px;
+      color: #111827;
+    }
+    .container{
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+      padding: 20px 28px;
+    }
+    h1{
+      margin: 0 0 12px 0;
+      font-size: 1.25rem;
+      color: var(--accent);
+    }
+    p.lead{
+      margin: 0 0 18px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    ol.lines{
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    ol.lines li{
+      margin: 8px 0;
+      line-height: 1.5;
+      background: linear-gradient(90deg, rgba(37,99,235,0.03), transparent);
+      padding: 8px 12px;
+      border-radius: 6px;
+      list-style: decimal inside;
+      font-size: 1rem;
+    }
+    footer{
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
+    @media (max-width:480px){
+      .container{ padding:16px; }
+      ol.lines li{ font-size:0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="title">
+    <h1 id="title">Vent i righe di testo</h1>
+    <p class="lead">Esempio semplice: ogni riga è un elemento separato (totale = 20).</p>
+
+    <ol class="lines" aria-label="Elenco di venti righe">
+      <li>Questa è la riga numero 1: benvenuto nel documento di prova.</li>
+      <li>Riga 2: testo di esempio per illustrare il layout.</li>
+      <li>Riga 3: qui possiamo provare a leggere con calma.</li>
+      <li>Riga 4: ogni riga è distinta e ben separata.</li>
+      <li>Riga 5: colori leggeri migliorano la leggibilità.</li>
+      <li>Riga 6: questo contenuto è puramente dimostrativo.</li>
+      <li>Riga 7: puoi copiare e incollare questo file nel browser.</li>
+      <li>Riga 8: il formato è responsive su dispositivi piccoli.</li>
+      <li>Riga 9: i numeri facilitano il riferimento alle righe.</li>
+      <li>Riga 10: modifica il testo liberamente per i tuoi test.</li>
+      <li>Riga 11: design semplice e pulito.</li>
+      <li>Riga 12: il foglio mostra esattamente venti righe.</li>
+      <li>Riga 13: ogni riga ha uno spazio coerente.</li>
+      <li>Riga 14: utilizza il tag &lt;ol&gt; per l'ordine numerato.</li>
+      <li>Riga 15: puoi trasformare le righe in link o note.</li>
+      <li>Riga 16: prova a stampare per vedere il risultato cartaceo.</li>
+      <li>Riga 17: l'HTML è valido e accessibile.</li>
+      <li>Riga 18: il layout usa font di sistema per performance.</li>
+      <li>Riga 19: aggiungi immagini o altri elementi se vuoi.</li>
+      <li>Riga 20: fine dell'elenco — grazie per aver provato il file!</li>
+    </ol>
+
+    <footer>Generato il: <!-- JavaScript inserisce la data --></footer>
+  </div>
+
+  <script>
+    // Mostra la data odierna nel footer
+    const f = document.querySelector('footer');
+    if(f){
+      const now = new Date();
+      f.textContent = 'Generato il: ' + now.toLocaleString();
+    }
+  </script>
+</body>
+</html>
